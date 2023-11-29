@@ -1,0 +1,34 @@
+.general {
+  background-position: left calc((50vw - 170px) - 340px) top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg);
+}
+
+.fondo-details {
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(31.5, 31.5, 31.5, 1) calc((50vw - 170px) - 340px),
+    rgba(31.5, 31.5, 31.5, 0.84) 50%,
+    rgba(31.5, 31.5, 31.5, 0.84) 100%
+  );
+}
+
+.container-details {
+  display: flex;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.img-details {
+  min-width: 300px;
+  width: 200px;
+  height: 450px;
+}
+.img-details img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
