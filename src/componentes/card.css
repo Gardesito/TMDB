@@ -13,3 +13,35 @@
 .card:hover {
   transform: scale(1.05);
 }
+
+.card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.card :after {
+  content: "";
+  filter: blur(20px);
+  background-color: #fff 9;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  position: absolute;
+  width: 5vmin;
+  box-shadow: 0 0 10vmin 2.5vmin #fff;
+  transform: skew(-20deg);
+  transition: all 0.25s ease;
+}
+.card :hover:before {
+  opacity: 0;
+  transition: opacity 0.65s ease 0s;
+ 
+}
+.card :hover:after {
+  left: 400px;
+  transition: left 0.5s ease 0s;
+}

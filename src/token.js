@@ -1,2 +1,3 @@
-TOKEN =
+movie_key =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjUxZmE5ZTg2Yjk3N2U2NGJhNzUzZmI2YjM5MzMwMiIsInN1YiI6IjY1NWY1MWI2N2RmZGE2MDBhYzIxNTUxZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BlZfenNoehLjhIX0-Ovs0RORJ3O5_BR5G5F5GB4u1p8";
+export default movie_key;

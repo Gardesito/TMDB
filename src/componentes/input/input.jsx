@@ -32,23 +32,17 @@ function Input({ setMovies }) {
   return (
     <>
       <section>
-        <h1 className="title">Bienvenidos</h1>
-        <h2 className="sub">
-          Millones de películas, programas de televisión y personas por
-          descubrir. Explora ahora.
-        </h2>
-
         {/* -------------------------------------------- */}
-        <div class="searchBox">
+        <div className="searchBox">
           <input
             value={movieName}
-            class="searchInput"
+            className="searchInput"
             type="text"
             name=""
             placeholder="Buscar una pelicula..."
             onChange={onChange}
           />
-          <button onClick={onClick} class="searchButton" href="#">
+          <button onClick={onClick} className="searchButton" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="29"
