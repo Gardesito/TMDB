@@ -34,7 +34,7 @@ function App() {
         <Input setMovies={setMovies} />
         <div className="card-list">
           {movies.map((movie) => (
-            <Card movie={movie} />
+            <Card  movie={movie} />
           ))}
         </div>
       </div>

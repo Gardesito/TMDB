@@ -9,12 +9,14 @@ function Header() {
           <div>
             <img src="./img/logo/logo.png" width="150px" alt="" />
           </div>
-          <nav className="menu" for="btn-menu">
+          <nav className="menu" htmlFor="btn-menu">
             <Link className="links" to="/">
               Home
             </Link>
             <Link className="links">Peliculas</Link>
-            <Link className="links">Personas</Link>
+            <Link className="links" to="/favoritos">
+              Favoritos
+            </Link>
             <Link className="links">Mas</Link>
           </nav>
         </div>
