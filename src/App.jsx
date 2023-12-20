@@ -29,12 +29,12 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+      <Hero setMovies={setMovies} />
       <div className="container">
-        <Input setMovies={setMovies} />
+        {/* <Input setMovies={setMovies} /> */}
         <div className="card-list">
           {movies.map((movie) => (
-            <Card  movie={movie} />
+            <Card movie={movie} />
           ))}
         </div>
       </div>

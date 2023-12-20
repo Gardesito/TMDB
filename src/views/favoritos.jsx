@@ -5,16 +5,15 @@ import "./favoritos.css";
 function Favoritos() {
   const listaFavoritos = JSON.parse(localStorage.getItem("movies"));
 
-  listaFavoritos.map((movie)=> console.log(movie.name))
-  //console.log(listaFavoritos);
+  console.log(localStorage.getItem("movies"))
   return (
     <div>
       <Header />
 
       <h1>Favoritos</h1>
-      {/* {listaFavoritos.map((movie) => {
+      {listaFavoritos.map((movie) => {
         return <div>{movie.name}</div>;
-      })} */}
+      })}
     </div>
   );
 }

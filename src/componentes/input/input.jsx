@@ -30,8 +30,8 @@ function Input({ setMovies }) {
   };
 
   return (
-    <>
-      <section>
+    
+      <section className="inputContainer">
         {/* -------------------------------------------- */}
         <div className="searchBox">
           <input
@@ -116,7 +116,7 @@ function Input({ setMovies }) {
 
         {/*  <input type="text" className="search" /> */}
       </section>
-    </>
+    
   );
 }
 export default Input;
