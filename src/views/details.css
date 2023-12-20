@@ -101,3 +101,16 @@
 .genre {
   padding: 5px;
 }
+
+@media (max-width: 600px) {
+  .container-details {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px; */
+  }
+  .info-container {
+    margin-left: 0px;
+  }
+}

@@ -45,8 +45,3 @@
   transition: left 0.5s ease 0s;
 }
 
-@media (max-width: 600px) {
-  .card {
-   
-  }
-}
