@@ -13,11 +13,11 @@ function Header() {
             <Link className="links" to="/">
               Home
             </Link>
-            <Link className="links">Peliculas</Link>
+            {/* <Link className="links">Peliculas</Link> */}
             <Link className="links" to="/favoritos">
               Favoritos
             </Link>
-            <Link className="links">Mas</Link>
+          {/*   <Link className="links">Mas</Link> */}
           </nav>
         </div>
       </header>

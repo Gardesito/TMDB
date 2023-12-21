@@ -15,6 +15,12 @@ const options = {
 function Details() {
   let { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const [movieList, setMovieList] = useState(
+    JSON.parse(window.localStorage.getItem("movies")) || []
+  );
+  useEffect(() => {
+    window.localStorage.setItem("movies", JSON.stringify(movieList));
+  }, [movieList]);
 
   useEffect(() => {
     fetch(
@@ -27,16 +33,6 @@ function Details() {
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(movie);
-  if (!movie) {
-    return (
-      <div className="loader">
-        <li className="ball"></li>
-        <li className="ball"></li>
-        <li className="ball"></li>
-      </div>
-    );
-  }
 
   const obteneraño = (date) => {
     const year = date.substr(0, 4);
@@ -67,9 +63,26 @@ function Details() {
   }
 
   const agregarFavorito = () => {
-    // agregar la pelicula al local storage
+    const existingMovie = movieList.find((m) => m.id === movie.id);
+    if (existingMovie) {
+      console.log("La película ya está en la lista de favoritos.");
+      return;
+    }
+    const favorite = {
+      id: movie.id,
+      title: movie.title,
+      image: movie.poster_path,
+      favorite: movie.overview,
+    };
+    setMovieList([...movieList, favorite]);
   };
+
   //console.log(localStorage.getItem("movies"));
+
+  if (!movie) {
+    return <></>;
+  }
+
   return (
     <>
       <Header />
@@ -97,7 +110,7 @@ function Details() {
               ))}
               <span> {convertirMinutosAHoras(movie.runtime)}</span>
               <div className="btn1">
-                <button className="button" onClick={agregarFavorito()}>
+                <button className="button" onClick={() => agregarFavorito()}>
                   <span className="button-content">agregar a favoritos</span>
                 </button>
               </div>
