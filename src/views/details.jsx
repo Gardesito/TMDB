@@ -96,8 +96,10 @@ function Details() {
                 <span className="genre">{genre.name}</span>
               ))}
               <span> {convertirMinutosAHoras(movie.runtime)}</span>
-              <div>
-                <button onClick={agregarFavorito()}>agregar a favoritos</button>
+              <div className="btn1">
+                <button className="button" onClick={agregarFavorito()}>
+                  <span className="button-content">agregar a favoritos</span>
+                </button>
               </div>
               <p className="tagline">{movie.tagline}</p>
               <p className="descripcion">({movie.overview})</p>
